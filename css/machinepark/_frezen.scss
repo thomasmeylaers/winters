@@ -1,0 +1,59 @@
+.machinepark__frezen {
+    position: relative;
+    padding-top: 3rem;
+    &__bg {
+        background-color: $brokenWhite;
+        width: 100%;
+        height: 350px;
+        position: absolute;
+        z-index: -1;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        gap: 100px;
+    }
+    &__title {
+        text-transform: uppercase;
+        h1 {
+            font-weight: 400;
+            font-size: 24px;
+        }
+    }
+    &__unit {
+        &__title {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 24px;
+            margin-bottom: 0.5rem;
+        }
+        &__text {
+            font-weight: 100;
+            font-size: 16px;
+            display: grid;
+            width: 450px;
+            grid-template-columns: 1fr 1fr;
+            p {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+    @include breakpoint-down(medium) {
+        padding-bottom: 3rem;
+        &__wrapper {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        &__bg {
+            display: none;
+        }
+        background-color: $brokenWhite;
+    }
+    @include breakpoint-down(small) {
+        &__unit {
+            &__text {
+                width: 110%;
+            }
+        }
+    }
+}

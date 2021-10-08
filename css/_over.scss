@@ -1,0 +1,76 @@
+.over-ons {
+    @include breakpoint-up(large) {
+        &__wrapper {
+            position: relative;
+            height: 600px;
+        }
+        &__text {
+            position: absolute;
+            top: 0rem;
+            left: 0%;
+            padding: 3rem;
+            width: 40rem;
+            box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.16);
+            z-index: 10;
+            background-color: white;
+            h1 {
+                margin-top: 0;
+            }
+            p {
+                margin-bottom: 0;
+                font-weight: 300;
+                line-height: 2.5ch;
+            }
+        }
+        &__image {
+            position: absolute;
+            top: 6rem;
+            left: calc(0% + 35rem);
+            >img {
+                width: 110%;
+                scale: 1;
+            }
+            .accent {
+                margin-top: 1rem;
+                img {
+                    width: 60%;
+                    // width: 100%;
+                }
+            }
+        }
+    }
+    @include breakpoint-down(large) {
+        &__text {
+            font-size: 16px;
+            line-height: 2.5ch;
+            font-weight: 300;
+            h1 {
+                margin-bottom: 0;
+                margin-top: 2rem;
+            }
+        }
+        &__image {
+            margin-top: 3rem;
+            >img {
+                width: 120%;
+            }
+            .accent {
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+    @include breakpoint-down(medium) {
+        &__image {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            >img {
+                width: 100%;
+            }
+            .accent {
+                display: none;
+            }
+        }
+    }
+}

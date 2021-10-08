@@ -1,0 +1,11 @@
+WEBSITE:
+- Alle viewports nakijken
+(- Navigatie fixen)
+
+DEPLOYMENT:
+- SEO
+- Google analytics
+- GDPR
+
+OPMERKINGEN:
+- Misschien ergens een galerij

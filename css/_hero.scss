@@ -1,0 +1,36 @@
+.hero {
+    height: 100vh;
+    background-image: url(../img/index/index-overlay.jpg);
+    background-size: cover;
+    background-position: center left;
+    color: white;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+    }
+    &__title {
+        text-align: center;
+        h1 {
+            font-size: 2rem;
+            @include breakpoint-up(large) {
+                font-size: 3rem;
+            }
+            font-weight: 300;
+            text-align: center;
+            margin-top: 0;
+        }
+        .green {
+            color: $mildGreen;
+            font-weight: 500;
+        }
+    }
+    &__links {
+        margin-top: 4em;
+        a:first-child {
+            margin-right: 2em;
+        }
+    }
+}

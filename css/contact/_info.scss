@@ -1,0 +1,55 @@
+.contact__info {
+    font-size: 24px;
+    margin-bottom: 5rem;
+    a {
+        color: $darkGrey;
+        transition: ease-in 0.1s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &__section {
+        &__title {
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+        &__title_2 {
+            margin-top: 3rem;
+            margin-bottom: -0.5rem;
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img {
+                width: 1rem;
+                margin-right: 8px;
+            }
+            a {
+                font-weight: 300;
+                line-height: 2.5ch;
+                &:last-child {
+                    margin-top: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+            p {
+                margin: 0;
+                font-weight: 300;
+                line-height: 2.5ch;
+            }
+        }
+    }
+    @include breakpoint-up(medium) {
+        margin-top: -500px;
+    }
+    @include breakpoint-down(large) {
+        margin-top: -350px;
+    }
+    @include breakpoint-down(medium) {
+        margin-top: -250px;
+    }
+    @include breakpoint-down(small) {
+        margin-top: 0;
+    }
+}

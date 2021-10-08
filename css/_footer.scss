@@ -1,0 +1,96 @@
+.footer {
+    position: relative;
+    background-color: $darkGrey;
+    @include breakpoint-up(large) {
+        &::before {
+            z-index: -1;
+            content: '';
+            background: $darkGrey;
+            position: absolute;
+            top: calc(50% + 20px);
+            left: 0;
+            right: 0;
+            bottom: -5px;
+        }
+    }
+    a {
+        color: white;
+        transition: ease-in 0.1s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    .fixed-container {
+        padding: 8rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__adres {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img {
+                width: 1rem;
+                margin-right: 8px;
+            }
+            a {
+                &:last-child {
+                    margin-top: 1ch;
+                }
+            }
+        }
+        &__info {
+            line-height: 3ch;
+            font-weight: 100;
+            color: white;
+        }
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__fpd {
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        color: white;
+        font-weight: 100;
+        font-size: 14px;
+        a {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            margin-left: 0.5rem;
+            width: 3rem;
+            opacity: 0.8;
+        }
+    }
+    @include breakpoint-down(medium) {
+        .fixed-container {
+            padding: 8rem 0;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        &__adres {
+            &__contact {
+                margin-top: 3rem;
+            }
+            &__info {
+                margin-top: 2rem;
+            }
+        }
+        &__links {
+            margin-top: 2rem;
+            a {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

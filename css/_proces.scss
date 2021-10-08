@@ -1,0 +1,130 @@
+.proces {
+    background-color: $darkGrey;
+    position: relative;
+    &__img {
+        height: 500px;
+        background-image: url('/img/index/DSC05340.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &::after {
+        content: '';
+        background: $brokenWhite;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 500px;
+        bottom: -200px;
+        z-index: -50;
+    }
+    @include breakpoint-up(large) {
+        .proces__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__card {
+            margin-bottom: 5rem;
+            filter: drop-shadow( 0 0 1rem rgba(0, 0, 0, 0.4));
+            width: 33.33%;
+            color: black;
+            &:nth-child(1) {
+                .card_wrapper {
+                    margin-right: auto;
+                }
+            }
+            &:nth-child(2) {
+                .card_wrapper {
+                    margin: auto;
+                }
+            }
+            &:nth-child(3) {
+                .card_wrapper {
+                    margin-left: auto;
+                }
+            }
+            .card_wrapper {
+                width: 90%;
+                padding: 1rem;
+                padding-bottom: 3rem;
+                margin-bottom: 5rem;
+                >img {
+                    width: 6rem;
+                    margin: auto;
+                    margin-top: 2rem;
+                }
+                background-color: white;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .card_title {
+                text-transform: uppercase;
+                margin-top: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .card_text {
+                width: 70%;
+                margin: auto;
+                font-size: 14px;
+                line-height: 2.5ch;
+                font-weight: 300;
+            }
+        }
+        hr {
+            margin-bottom: 2rem;
+        }
+        // &__bg {
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: $darkGrey;
+        //     position: absolute;
+        //     z-index: -50;
+        // }
+    }
+    @include breakpoint-down(large) {
+        &__card {
+            margin-bottom: 2rem;
+            filter: drop-shadow( 0 0 1rem rgba(0, 0, 0, 0.4));
+            width: 100%;
+            color: black;
+            .card_wrapper {
+                width: 80%;
+                padding: 1rem;
+                margin: auto;
+                >img {
+                    width: 5rem;
+                    margin: auto;
+                }
+                background-color: white;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .card_title {
+                text-transform: uppercase;
+                margin-top: 1rem;
+                margin-bottom: 0rem;
+            }
+            .card_text {
+                line-height: 2.5ch;
+                font-weight: 300;
+            }
+        }
+        hr {
+            margin-bottom: 2rem;
+        }
+        &__bg {
+            height: 90%;
+            width: 100%;
+            background-color: $darkGrey;
+            position: absolute;
+            z-index: -50;
+        }
+        &__img {
+            height: 250px;
+        }
+    }
+    position: relative;
+    color: white;
+}

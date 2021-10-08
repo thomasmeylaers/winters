@@ -1,0 +1,201 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    background-color: white;
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+::selection {
+    color: white;
+    background: $darkGreen;
+}
+
+// Flexbox helper class 
+.flex {
+    display: flex;
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+// Buttons
+button,
+.button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.375rem;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    color: white;
+    // background-color: $buttonGreen;
+    border: solid $buttonGreen 1px;
+    cursor: pointer;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    &:hover {
+        // opacity: 0.8;
+        background-color: $buttonGreen;
+        color: $darkGrey;
+    }
+}
+
+.button-alternative {
+    letter-spacing: 1px;
+    padding: 0.5rem 1.375rem;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    color: white;
+    background-color: $buttonGreen;
+    border: solid $buttonGreen 1px;
+    cursor: pointer;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    &:hover {
+        // opacity: 0.8;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+    }
+}
+
+.button-white {
+    letter-spacing: 1px;
+    padding: 0.5rem 1.375rem;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    color: white;
+    background-color: $buttonGreen;
+    border: solid $buttonGreen 1px;
+    cursor: pointer;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    &:hover {
+        // opacity: 0.8;
+        background-color: rgba(0, 0, 0, 0);
+        color: $darkGrey;
+    }
+}
+
+.button-outline {
+    padding: 0.2rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    color: white;
+    border: solid $mildGreen 1px;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        background-color: $mildGreen;
+    }
+}
+
+// Visibility
+.hide-for-mobile {
+    // hide for tablet and mobile
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    // hide for desktop viewportß
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.fixed-container {
+    margin: 0 auto;
+    @include breakpoint-up(large) {
+        width: 1173px;
+    }
+    @include breakpoint-down(large) {
+        width: 920px;
+    }
+    @include breakpoint-down(medium) {
+        width: 90vw;
+    }
+}
+
+.section_title {
+    text-transform: uppercase;
+    @include breakpoint-up(large) {
+        padding-left: calc((100vw - 1173px)/2);
+    }
+    @include breakpoint-down(large) {
+        padding-left: calc((100vw - 920px)/2);
+    }
+    @include breakpoint-down(medium) {
+        padding-left: 3vw;
+    }
+    hr {
+        color: $lightGreen;
+        background-color: $lightGreen;
+        border: none;
+        height: 2px;
+    }
+    h2 {
+        font-weight: 300;
+        padding-top: 4rem;
+        @include breakpoint-up(large) {
+            padding-top: 7rem;
+        }
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.underline {
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 10px;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        background: $lightGreen;
+        opacity: 0.5;
+        z-index: -1;
+    }
+}
+
+.load_wrapper {
+    position: absolute;
+    height: 200vh;
+    width: 100vw;
+    background-color: $darkGrey;
+    z-index: 50;
+}

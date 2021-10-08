@@ -1,0 +1,73 @@
+.cta {
+    position: relative;
+    &::before {
+        z-index: -1;
+        content: '';
+        background: $darkGrey;
+        position: absolute;
+        top: calc(50% + 20px);
+        left: 0;
+        right: 0;
+        bottom: -5px;
+    }
+    &__wrapper {
+        background-color: $brokenWhite;
+        margin: 0 5rem;
+        padding: 3rem 5rem;
+        @include breakpoint-down(medium) {
+            padding: 3rem 2rem;
+        }
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        &__title {
+            @include breakpoint-up(large) {
+                font-size: 40px;
+            }
+            @include breakpoint-down(large) {
+                font-size: 24px;
+            }
+            @include breakpoint-down(medium) {
+                font-size: 20px;
+            }
+            letter-spacing: 1px;
+            font-weight: 250;
+        }
+        &__button {
+            button {
+                color: $darkGrey;
+                padding: 1.4rem 2.5rem;
+                @include breakpoint-down(medium) {
+                    padding: 0.7rem 1.25rem;
+                }
+            }
+            @include breakpoint-up(medium) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+    @include breakpoint-down(small) {
+        .fixed-container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        &__wrapper {
+            margin: 0 0rem;
+            display: flex;
+            flex-direction: column;
+            &__button {
+                button {
+                    margin-top: 1rem;
+                    color: $darkGrey;
+                    padding: 1.4rem 2.5rem;
+                    @include breakpoint-down(medium) {
+                        padding: 0.7rem 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}

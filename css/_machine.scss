@@ -1,0 +1,58 @@
+.machine {
+    @include breakpoint-up(large) {
+        &__wrapper {
+            position: relative;
+            background-color: $darkGrey;
+            height: 70vh;
+        }
+        &__image {
+            position: absolute;
+            margin-top: -150px;
+            width: 60%;
+            >img {
+                width: 100%;
+                scale: 1;
+            }
+        }
+        &__text {
+            color: white;
+            position: absolute;
+            z-index: 50;
+            width: 30rem;
+            right: 10rem;
+            top: 3rem;
+        }
+        .accent {
+            margin-top: 1rem;
+            text-align: right;
+            >img {
+                width: 50%;
+            }
+        }
+    }
+    @include breakpoint-down(large) {
+        &__wrapper {
+            background-color: $darkGrey;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 25px;
+            color: white;
+            h1 {
+                margin-bottom: 0;
+                padding-top: 2rem;
+            }
+        }
+        &__image {
+            >img {
+                width: 100%;
+            }
+        }
+        .accent {
+            text-align: right;
+            >img {
+                width: 80%;
+            }
+        }
+    }
+}

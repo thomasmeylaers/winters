@@ -1,0 +1,27 @@
+// Index
+@import "variables";
+@import "loader";
+@import "mixins";
+@import "animations";
+@import "transition";
+@import "globals";
+@import "header";
+@import "hero";
+@import "over";
+@import "machine";
+@import "proces";
+@import "machinepark";
+@import "team";
+@import "cta";
+@import "footer";
+// Producten
+@import "producten/header";
+@import "producten/hero";
+@import "producten/items";
+// Machinepark
+@import "machinepark/hero";
+@import "machinepark/frezen";
+@import "machinepark/etc";
+//Contact
+@import "contact/hero";
+@import "contact/info";
