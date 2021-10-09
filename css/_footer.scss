@@ -92,5 +92,11 @@
                 margin-bottom: 1rem;
             }
         }
+        &__fpd {
+            left: 20px;
+            &__bold {
+                font-weight: 300;
+            }
+        }
     }
 }

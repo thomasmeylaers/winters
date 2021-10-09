@@ -9,3 +9,7 @@ DEPLOYMENT:
 
 OPMERKINGEN:
 - Misschien ergens een galerij
+
+FEEDBACK:
+- Iets met die accenten aanvangen
+- "over ons" naar "home" aanpassen?

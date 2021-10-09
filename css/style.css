@@ -1282,6 +1282,12 @@ button:hover,
   .footer__links a {
     margin-bottom: 1rem;
   }
+  .footer__fpd {
+    left: 20px;
+  }
+  .footer__fpd__bold {
+    font-weight: 300;
+  }
 }
 
 .producten__header nav {
