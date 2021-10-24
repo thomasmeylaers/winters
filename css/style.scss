@@ -5,6 +5,7 @@
 @import "animations";
 @import "transition";
 @import "globals";
+@import "nav";
 @import "header";
 @import "hero";
 @import "over";
@@ -15,13 +16,16 @@
 @import "cta";
 @import "footer";
 // Producten
+@import "producten/nav";
 @import "producten/header";
 @import "producten/hero";
 @import "producten/items";
 // Machinepark
+@import "machinepark/nav";
 @import "machinepark/hero";
 @import "machinepark/frezen";
 @import "machinepark/etc";
 //Contact
+@import "contact/nav";
 @import "contact/hero";
 @import "contact/info";

@@ -8,6 +8,48 @@ const arrow = $('#arrow')
 const target = document.querySelector('#js-target');
 const leesMeer = $('#lees__meer')
 
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+// We listen to the resize event
+window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+const navSlide = () => {
+    const burger = document.querySelector('.nav__burger')
+    const nav = document.querySelector('.nav__links')
+    const navLinks = document.querySelectorAll('.nav__links li')
+
+
+    burger.addEventListener('click', () => {
+        // Toggle Nav
+        nav.classList.toggle('nav__not_active')
+        nav.classList.toggle('nav__active')
+
+        // Animate links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+
+                link.style.animation = ''
+            } else {
+                link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index/7 + 0.5}s`
+            }
+        })
+
+
+        // Burger animation 
+        burger.classList.toggle('nav__burger__toggle')
+    })
+
+
+}
+
+navSlide()
+
 function loader() {
     let tl = gsap.timeline({ defaults: { ease: "none" } }).to(".load_wrapper", {
         duration: 0.7,
@@ -138,23 +180,23 @@ ScrollTrigger.refresh();
 
 
 // Mobile hamburger animations
-btnHamburger.addEventListener('click', () => {
+// btnHamburger.addEventListener('click', () => {
 
-    if (header.classList.contains('open')) { // Close
-        body.classList.remove('noscroll')
-        header.classList.remove('open')
-        fadeElems.forEach(function(elem) {
-            elem.classList.remove('fade-in')
-            elem.classList.add('fade-out')
-        })
+//     if (header.classList.contains('open')) { // Close
+//         body.classList.remove('noscroll')
+//         header.classList.remove('open')
+//         fadeElems.forEach(function(elem) {
+//             elem.classList.remove('fade-in')
+//             elem.classList.add('fade-out')
+//         })
 
 
-    } else { // Open
-        body.classList.add('noscroll')
-        header.classList.add('open')
-        fadeElems.forEach(function(elem) {
-            elem.classList.remove('fade-out')
-            elem.classList.add('fade-in')
-        })
-    }
-})
+//     } else { // Open
+//         body.classList.add('noscroll')
+//         header.classList.add('open')
+//         fadeElems.forEach(function(elem) {
+//             elem.classList.remove('fade-out')
+//             elem.classList.add('fade-in')
+//         })
+//     }
+// })

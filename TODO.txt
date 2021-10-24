@@ -13,3 +13,6 @@ OPMERKINGEN:
 FEEDBACK:
 - Iets met die accenten aanvangen
 - "over ons" naar "home" aanpassen?
+- "contacteer ons" werkt niet
+- links zijn nog altijd niet in orde
+- Bedrijf cta rechts centreren volgens Karl

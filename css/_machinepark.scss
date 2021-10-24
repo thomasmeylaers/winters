@@ -8,6 +8,13 @@
         z-index: -10;
     }
     @include breakpoint-up(large) {
+        .accent {
+            margin-top: -40px;
+            margin-bottom: 2rem;
+            img {
+                width: 370px;
+            }
+        }
         .section_title {
             margin-bottom: 2rem;
         }
