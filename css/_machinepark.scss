@@ -88,6 +88,9 @@
         }
     }
     @include breakpoint-down(large) {
+        .accent {
+            display: none;
+        }
         .section_title {
             margin-bottom: 1rem;
         }
