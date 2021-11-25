@@ -36,7 +36,7 @@ const navSlide = () => {
 
                 link.style.animation = ''
             } else {
-                link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index/7 + 0.5}s`
+                link.style.animation = `navLinkFadeIn 0.5s ease forwards ${index / 7 + 0.5}s`
             }
         })
 
@@ -85,7 +85,7 @@ function loader2() {
 //     stagger: "0.1"
 // })
 
-$(window).on("load", function() {
+$(window).on("load", function () {
     loader2()
 })
 
@@ -121,11 +121,11 @@ ScrollTrigger.scrollerProxy("[data-scroll-container]", {
     pinType: document.querySelector("[data-scroll-container]").style.transform ? "transform" : "fixed"
 });
 
-arrow.click(function() {
+arrow.click(function () {
     scroll.scrollTo(target);
 })
 
-leesMeer.click(function(e) {
+leesMeer.click(function (e) {
     e.preventDefault();
     scroll.scrollTo(target);
 })

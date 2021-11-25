@@ -1117,6 +1117,9 @@ button:hover,
 }
 
 @media (max-width: 87.4375em) {
+  .machinepark .accent {
+    display: none;
+  }
   .machinepark .section_title {
     margin-bottom: 1rem;
   }
