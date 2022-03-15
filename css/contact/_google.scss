@@ -1,0 +1,15 @@
+.google {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  iframe {
+    width: 70%;
+    height: 500px;
+  }
+  @include breakpoint-down(large) {
+    padding: 0;
+    iframe {
+      width: 100%;
+    }
+  }
+}

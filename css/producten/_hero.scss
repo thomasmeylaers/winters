@@ -1,106 +1,107 @@
 .producten__hero {
-    &::before {
-        z-index: -1;
-        content: '';
-        background: $darkGrey;
-        position: absolute;
-        // top: calc(50% + 20px);
-        left: 0;
-        right: 0;
-        top: -5px;
-        height: 100px;
+  &::before {
+    z-index: -1;
+    content: "";
+    background: $darkGrey;
+    position: absolute;
+    // top: calc(50% + 20px);
+    left: 0;
+    right: 0;
+    top: -5px;
+    height: 100px;
+  }
+  &__bg {
+    background-color: $darkGrey;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    @include breakpoint-up(large) {
+      top: 50px;
+      height: 600px;
     }
-    &__bg {
-        background-color: $darkGrey;
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-        @include breakpoint-up(large) {
-            top: 50px;
-            height: 600px;
-        }
-        @include breakpoint-down(large) {
-            height: 600px;
-        }
+    @include breakpoint-down(large) {
+      height: 400px;
     }
-    color: white;
-    .fixed-container {
-        display: flex;
-        justify-content: space-between;
-        padding: 5rem 0;
+  }
+  color: white;
+  .fixed-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 0;
+  }
+  &__text {
+    &__title {
+      margin: 0;
+      @include breakpoint-up(large) {
+        font-size: 56px;
+      }
+      @include breakpoint-down(large) {
+        font-size: 44px;
+      }
+      @include breakpoint-down(medium) {
+        font-size: 36px;
+      }
+      font-weight: 300;
     }
     &__text {
-        &__title {
-            margin: 0;
-            @include breakpoint-up(large) {
-                font-size: 56px;
-            }
-            @include breakpoint-down(large) {
-                font-size: 44px;
-            }
-            @include breakpoint-down(medium) {
-                font-size: 36px;
-            }
-            font-weight: 300;
-        }
-        &__text {
-            text-align: justify;
-            font-weight: 300;
-            line-height: 3ch;
-        }
-        &__arrow {
-            @include breakpoint-up(large) {
-                margin-top: 5rem;
-            }
-            @include breakpoint-down(large) {
-                margin-top: 1rem;
-            }
-            @include breakpoint-down(medium) {
-                display: none;
-            }
-            img {
-                cursor: pointer;
-            }
-        }
+      text-align: justify;
+      font-weight: 400;
+      line-height: 3ch;
+      width: 80%;
     }
+    &__arrow {
+      @include breakpoint-up(large) {
+        margin-top: 2rem;
+      }
+      @include breakpoint-down(large) {
+        margin-top: 1rem;
+      }
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+  &__image {
+    margin-left: 5rem;
+    text-align: right;
+    img {
+      width: 500px;
+    }
+  }
+  margin-bottom: -150px;
+  @include breakpoint-down(medium) {
+    margin-bottom: -50px;
+  }
+  @include breakpoint-up(small) {
+    .fixed-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 5rem 0;
+    }
+    &__image__mob {
+      display: none;
+    }
+  }
+  @include breakpoint-down(small) {
+    margin-bottom: 2rem;
     &__image {
-        margin-left: 5rem;
-        text-align: right;
-        img {
-            width: 500px;
-        }
+      display: none;
     }
-    margin-bottom: -150px;
-    @include breakpoint-down(medium) {
-        margin-bottom: -50px;
+    .fixed-container {
+      padding: 2rem 0;
     }
-    @include breakpoint-up(small) {
-        .fixed-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 5rem 0;
-        }
-        &__image__mob {
-            display: none;
-        }
+    &__image__mob {
+      margin-bottom: 5rem;
+      width: 100%;
+      height: 250px;
+      background-image: url("../img/producten/DSC05817.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      // background-attachment: fixed;
     }
-    @include breakpoint-down(small) {
-        margin-bottom: 2rem;
-        &__image {
-            display: none;
-        }
-        .fixed-container {
-            padding: 2rem 0;
-        }
-        &__image__mob {
-            margin-bottom: 5rem;
-            width: 100%;
-            height: 250px;
-            background-image: url('../img/producten/DSC05817.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            // background-attachment: fixed;
-        }
-    }
+  }
 }
