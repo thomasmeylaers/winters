@@ -89,7 +89,6 @@ $(".option").click(function () {
 
   // Change background image
   $('.image-wrapper').css("background-image", `url(/winters/img/machinepark/100kb/${index + 1}.jpg)`);
-  console.log("h")
 })
 
 $('.mobile-unit-title-wrapper').click(function () {
