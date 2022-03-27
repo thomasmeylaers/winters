@@ -736,10 +736,16 @@ button:hover,
 
 .hero {
   height: 100vh;
-  background-image: url(../img/index/index-overlay.jpg);
+  background-image: url(../img/index/index-overlay-2.jpg);
   background-size: cover;
   background-position: center left;
   color: white;
+}
+
+@media (max-width: 87.4375em) {
+  .hero {
+    background-position: bottom;
+  }
 }
 
 .hero__wrapper {
@@ -750,39 +756,65 @@ button:hover,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 75vh;
-}
-
-.hero__title {
-  text-align: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .hero__title h1 {
-  font-size: 2rem;
   font-weight: 300;
-  text-align: center;
   margin-top: 0;
 }
 
 @media (min-width: 64em) {
   .hero__title h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 87.4375em) {
+  .hero__title h1 {
     font-size: 3rem;
   }
 }
 
+@media (max-width: 63.9375em) {
+  .hero__title h1 {
+    font-size: 2rem;
+  }
+}
+
 .hero__title .green {
-  color: #46BE55;
+  color: #5DFC71;
   font-weight: 500;
 }
 
 .hero__links {
+  cursor: pointer;
+  text-transform: uppercase;
   margin-top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -3rem;
+}
+
+@media (max-width: 87.4375em) {
+  .hero__links {
+    margin-left: 0;
+  }
+}
+
+.hero__links svg {
+  margin-right: 1rem;
+}
+
+.hero__links path {
+  fill: white !important;
 }
 
 .hero__links a:first-child {
@@ -1778,7 +1810,7 @@ button:hover,
 
 .machinepark__hero::before {
   z-index: -1;
-  content: '';
+  content: "";
   background: #3A3A3A;
   position: absolute;
   left: 0;
@@ -1789,13 +1821,14 @@ button:hover,
 
 .machinepark__hero::after {
   z-index: -5;
-  content: '';
+  content: "";
   background: #F8F8F8;
   position: absolute;
   left: 0;
   right: 0;
   height: 500px;
   bottom: 50px;
+  display: none;
 }
 
 .machinepark__hero__bg {
@@ -1814,7 +1847,7 @@ button:hover,
 
 @media (max-width: 87.4375em) {
   .machinepark__hero__bg {
-    height: 600px;
+    height: 300px;
   }
 }
 
@@ -2090,6 +2123,253 @@ button:hover,
   }
 }
 
+.machinepark-selection {
+  margin: 10rem 0;
+}
+
+.machinepark-selection .wrapper {
+  height: 70vh;
+}
+
+.machinepark-selection .wrapper .title-wrapper {
+  margin-bottom: 5rem;
+}
+
+.machinepark-selection .wrapper .title-wrapper .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.machinepark-selection .wrapper .title-wrapper .title::before {
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  content: "";
+  background-color: #5DFC71;
+  bottom: 0;
+}
+
+.machinepark-selection .wrapper .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.machinepark-selection .wrapper .content-wrapper::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: -85%;
+  z-index: -500;
+  background-color: #f8f8f8;
+  height: 50vh;
+}
+
+.machinepark-selection .wrapper .content-wrapper .options-wrapper {
+  position: relative;
+}
+
+.machinepark-selection .wrapper .content-wrapper .options-wrapper ul {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.machinepark-selection .wrapper .content-wrapper .options-wrapper ul li {
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  margin: 2rem 0;
+  -webkit-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.machinepark-selection .wrapper .content-wrapper .options-wrapper ul li:first-child::before {
+  display: none;
+}
+
+.machinepark-selection .wrapper .content-wrapper .options-wrapper ul li::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 10rem;
+  top: -1rem;
+  left: 0;
+  background-color: #5DFC71;
+}
+
+.machinepark-selection .wrapper .content-wrapper .options-wrapper ul .active {
+  -webkit-transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding-left: 2rem;
+  position: relative;
+  font-weight: bold;
+}
+
+.machinepark-selection .wrapper .content-wrapper .options-wrapper ul .active::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1rem;
+  background-color: #5DFC71;
+  left: 0rem;
+  top: 50%;
+}
+
+.machinepark-selection .wrapper .content-wrapper .selected-wrapper {
+  margin-left: 20%;
+}
+
+.machinepark-selection .wrapper .content-wrapper .selected-wrapper .selected-title {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.machinepark-selection .wrapper .content-wrapper .selected-wrapper .selected-unit-title {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.machinepark-selection .wrapper .content-wrapper .selected-wrapper .selected-unit-title:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.machinepark-selection .wrapper .content-wrapper .selected-wrapper .selected-unit-content {
+  font-weight: 200;
+}
+
+.machinepark-selection .wrapper .content-wrapper .selected-wrapper .selected-unit-content-machine {
+  margin: 0.5rem 0;
+}
+
+.machinepark-selection .wrapper .content-wrapper .image-wrapper {
+  position: absolute;
+  right: 0;
+  margin-right: -5rem;
+  width: 500px;
+  height: 600px;
+  overflow: hidden;
+  background-image: url("../../img/machinepark/100kb/1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.machinepark-selection .wrapper .content-wrapper .image-wrapper img {
+  height: 100%;
+  display: none;
+}
+
+.machinepark-selection .wrapper .content-wrapper .mobile-wrapper {
+  display: none;
+}
+
+.machinepark-selection .wrapper .content-wrapper .mobile-image-wrapper {
+  display: none;
+}
+
+@media (max-width: 63.9375em) {
+  .machinepark-selection {
+    margin-bottom: 5rem;
+  }
+  .machinepark-selection .wrapper {
+    height: auto;
+  }
+  .machinepark-selection .wrapper .content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .machinepark-selection .wrapper .content-wrapper::before {
+    left: -50%;
+    width: 200%;
+    top: -2rem;
+    height: 100%;
+  }
+  .machinepark-selection .wrapper .content-wrapper .options-wrapper {
+    display: none;
+  }
+  .machinepark-selection .wrapper .content-wrapper .selected-wrapper {
+    display: none;
+  }
+  .machinepark-selection .wrapper .content-wrapper .image-wrapper {
+    display: none;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-image-wrapper {
+    display: block;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-image: url("../../img/machinepark/100kb/1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper {
+    margin-bottom: 2rem;
+    display: block;
+    width: 100%;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit {
+    position: relative;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: -1rem;
+    left: 0;
+    background-color: #5DFC71;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit:first-child::before {
+    display: none;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-title {
+    text-transform: uppercase;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-plus svg,
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-plus path {
+    fill: black !important;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-minus {
+    display: none;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-minus svg,
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-minus path {
+    fill: none !important;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-content {
+    position: relative;
+    overflow: hidden;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-content-option-text {
+    padding-top: 1rem;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-content .mobile-unit-content-option-title {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-top: 2rem;
+  }
+}
+
 .contact__nav {
   background-color: #3A3A3A;
 }
@@ -2101,7 +2381,7 @@ button:hover,
 
 .contact__hero::before {
   z-index: -1;
-  content: '';
+  content: "";
   background: #3A3A3A;
   position: absolute;
   left: 0;
@@ -2171,6 +2451,8 @@ button:hover,
 .contact__hero__image {
   text-align: right;
   width: 100%;
+  max-height: 800px;
+  overflow: hidden;
 }
 
 .contact__hero__image img {
@@ -2212,9 +2494,9 @@ button:hover,
     margin-bottom: 5rem;
     width: 100%;
     height: 250px;
-    background-image: url("../img/contact/contact.jpg");
+    background-image: url("../img/contact/contact-2.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
   }
 }

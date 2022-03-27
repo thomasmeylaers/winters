@@ -80,7 +80,7 @@
             </header> -->
 
 
-            <nav data-scroll-section class="nav">
+            <nav data-scroll-section data-scroll-speed="1" class="nav">
                 <div class="nav__logo">
                     <img id="nav__logo__image" src="img/winters_logo_wit.png" alt="Winters gereedschapsmakerij logo">
                 </div>
@@ -90,7 +90,7 @@
                     </li>
                     <li><a class="hover-link" href="producten.html"> Producten</a></li>
                     <li><a class="hover-link" href="machinepark.html"> Machinepark</a></li>
-                    <li><button class="button-alternative"><a href="contact.html"> Contact</a></button></li>
+                    <li><a href="contact.html"><button class="button-alternative"> Contact</button></a></li>
                 </ul>
                 <div class="nav__burger">
                     <div>
@@ -103,18 +103,24 @@
 
 
             <div data-scroll data-scroll-speed="2" class="hero__wrapper">
+                <div class="fixed-container">
 
+                    <div class="hero__title fade_up">
+                        <h1>WIJ STAAN VOOR<br><span class="green">PRECISIE</span>, <span class="green">KWALITEIT</span>
+                            EN
+                            <span class="green">SERVICE</span>
+                        </h1>
+                    </div>
 
-                <div class="hero__title fade_up">
-                    <h1>WIJ STAAN VOOR<br><span class="green">PRECISIE</span>, <span class="green">KWALITEIT</span> EN
-                        <span class="green">SERVICE</span>
-                    </h1>
-                </div>
-
-                <div class="hero__links fade_up">
-                    <a id="lees__meer" class="button" href="#over-ons">LEES MEER</a>
-
-                    <a class="button-alternative" href="contact.html">CONTACT</a>
+                    <div id="lees__meer" class="hero__links fade_up">
+                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.293 16.293L19 20.586L14.707 16.293L13.293 17.707L19 23.414L24.707 17.707L23.293 16.293Z"
+                                fill="white" />
+                            <circle cx="19.5" cy="19.5" r="19" stroke="#40EB55" />
+                        </svg>
+                        scroll
+                    </div>
                 </div>
             </div>
         </section>

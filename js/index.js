@@ -129,6 +129,12 @@ leesMeer.click(function (e) {
     e.preventDefault();
     scroll.scrollTo(target);
 })
+$('#machinepark-arrow').click(function () {
+    scroll.scrollTo(document.querySelector('#machinepark-target'))
+})
+$('#producten-arrow').click(function () {
+    scroll.scrollTo(document.querySelector('#producten-target'))
+})
 
 
 // Animation Functions
