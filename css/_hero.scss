@@ -1,8 +1,8 @@
 .hero {
   height: 100vh;
-  background-image: url(../img/index/index-overlay-2.jpg);
+  background-image: url(../img/index/index-overlay-4.jpg);
   background-size: cover;
-  background-position: center left;
+  background-position: center right;
   color: white;
   @include breakpoint-down(large) {
     background-position: bottom;

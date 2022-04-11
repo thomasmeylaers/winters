@@ -429,6 +429,7 @@ button:hover,
 
 @media (min-width: 64em) {
   .nav {
+    padding-top: 1rem;
     z-index: 100000;
   }
   .nav__logo > img {
@@ -740,9 +741,9 @@ button:hover,
 
 .hero {
   height: 100vh;
-  background-image: url(../img/index/index-overlay-2.jpg);
+  background-image: url(../img/index/index-overlay-4.jpg);
   background-size: cover;
-  background-position: center left;
+  background-position: center right;
   color: white;
 }
 
@@ -826,6 +827,9 @@ button:hover,
 }
 
 @media (min-width: 64em) {
+  .over-ons video {
+    width: 100px;
+  }
   .over-ons__wrapper {
     position: relative;
     height: 600px;
@@ -848,6 +852,12 @@ button:hover,
     margin-bottom: 0;
     font-weight: 300;
     line-height: 2.5ch;
+  }
+  .over-ons__text__signature {
+    margin-top: 2rem;
+  }
+  .over-ons__text__signature img {
+    width: 25%;
   }
   .over-ons__image {
     position: absolute;
@@ -875,6 +885,12 @@ button:hover,
   .over-ons__text h1 {
     margin-bottom: 0;
     margin-top: 2rem;
+  }
+  .over-ons__text__signature {
+    margin-top: 1rem;
+  }
+  .over-ons__text__signature img {
+    width: 20%;
   }
   .over-ons__image {
     margin-top: 3rem;
@@ -1918,10 +1934,10 @@ button:hover,
 
 .machinepark__hero__image {
   height: 700px;
-  width: 4000px;
+  width: 2000px;
   margin-left: 5rem;
   display: inline-block;
-  background-image: url("../img/machinepark/optimized/DSC05335.jpg");
+  background-image: url("../img/machinepark/dnu60-2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1961,7 +1977,7 @@ button:hover,
   .machinepark__hero__image__mob {
     width: 100%;
     height: 250px;
-    background-image: url("../img/machinepark/DSC05335.jpg");
+    background-image: url("../img/machinepark/dnu60-2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

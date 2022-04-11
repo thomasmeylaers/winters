@@ -14,6 +14,8 @@
         }
     }
     @include breakpoint-up(large) {
+    padding-top: 1rem;
+
         z-index: 100000;
         &__logo {
             >img {
