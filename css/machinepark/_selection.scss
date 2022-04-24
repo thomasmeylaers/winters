@@ -27,8 +27,8 @@
       &::before {
         position: absolute;
         content: "";
-        width: 100%;
-        left: -85%;
+        width: 101%;
+        left: -82%;
         z-index: -500;
         background-color: #f8f8f8;
         height: 50vh;
@@ -42,6 +42,7 @@
           margin: 0;
           padding: 0;
           list-style: none;
+          width: 500px;
           li {
             cursor: pointer;
             text-transform: uppercase;

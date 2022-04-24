@@ -2190,8 +2190,8 @@ button:hover,
 .machinepark-selection .wrapper .content-wrapper::before {
   position: absolute;
   content: "";
-  width: 100%;
-  left: -85%;
+  width: 101%;
+  left: -82%;
   z-index: -500;
   background-color: #f8f8f8;
   height: 50vh;
@@ -2206,6 +2206,7 @@ button:hover,
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 500px;
 }
 
 .machinepark-selection .wrapper .content-wrapper .options-wrapper ul li {

@@ -88,7 +88,7 @@ $(".option").click(function () {
   $(".selected-wrapper").html(html[selectedOption])
 
   // Change background image
-  $('.image-wrapper').css("background-image", `url(/img/machinepark/100kb/${index + 1}.jpg)`);
+  $('.image-wrapper').css("background-image", `url(/winters/img/machinepark/100kb/${index + 1}.jpg)`);
 })
 
 $('.mobile-unit-title-wrapper').click(function () {
@@ -114,7 +114,7 @@ function getHeightOfSelections() {
 
 $('.mobile-unit-title-wrapper').click(function () {
   var index = $(this).index('.mobile-unit-title-wrapper');
-  $('.mobile-image-wrapper').css("background-image", `url(/img/machinepark/100kb/${index + 1}.jpg)`);
+  $('.mobile-image-wrapper').css("background-image", `url(/winters/img/machinepark/100kb/${index + 1}.jpg)`);
 
   if (index != active) {
     // $(this).children('.mobile-unit-title-plus').css('display', 'none')
