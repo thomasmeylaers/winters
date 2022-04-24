@@ -427,6 +427,14 @@ button:hover,
   margin: 5px;
 }
 
+.nav .language-selector a:first-child {
+  margin-right: 1rem;
+}
+
+.nav .language-selector .selected-language {
+  font-weight: bold;
+}
+
 @media (min-width: 64em) {
   .nav {
     padding-top: 1rem;
