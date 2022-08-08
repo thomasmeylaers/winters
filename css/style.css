@@ -1721,6 +1721,10 @@ button:hover,
   margin-top: 400px;
 }
 
+.producten__items__right #i-verloren-wastechniek {
+  margin-top: 5rem;
+}
+
 .producten__items__card {
   margin-bottom: 5rem;
   display: -webkit-box;

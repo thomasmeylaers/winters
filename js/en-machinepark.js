@@ -11,6 +11,7 @@ const html = {
       <div class="selected-unit-content-machine">Deckel-Maho DMU 80T X800 – Y600 – Z600
       </div>
       <div class="selected-unit-content-machine">Deckel-Maho 70V X700 – Y500 – Z500</div>
+      <div class="selected-unit-content-machine">Deckel-Maho DMU60T X630 Y560 Z560</div>
   </div>
   <div class="selected-unit-title">
       5-axis
