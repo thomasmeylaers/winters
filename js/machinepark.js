@@ -34,7 +34,7 @@ const html = {
   <div class="selected-unit-content">
       <div class="selected-unit-content-machine">Charmilles Robofil 330F
       </div>
-      <div class="selected-unit-content-machine">Agie Agiecut evolution 2</div>
+      <div class="selected-unit-content-machine">GF CUT P350 Pro</div>
       <div class="selected-unit-content-machine">Makino DUO64</div>
       <div class="selected-unit-content-machine">Charmilles HD 30 CNC (startgatvonken)</div>
   </div>
@@ -89,7 +89,7 @@ $(".option").click(function () {
   $(".selected-wrapper").html(html[selectedOption])
 
   // Change background image
-  $('.image-wrapper').css("background-image", `url(/winters/img/machinepark/100kb/${index + 1}.jpg)`);
+  $('.image-wrapper').css("background-image", `url(/img/machinepark/100kb/${index + 1}.jpg)`);
 })
 
 $('.mobile-unit-title-wrapper').click(function () {
@@ -115,7 +115,7 @@ function getHeightOfSelections() {
 
 $('.mobile-unit-title-wrapper').click(function () {
   var index = $(this).index('.mobile-unit-title-wrapper');
-  $('.mobile-image-wrapper').css("background-image", `url(/winters/img/machinepark/100kb/${index + 1}.jpg)`);
+  $('.mobile-image-wrapper').css("background-image", `url(/img/machinepark/100kb/${index + 1}.jpg)`);
 
   if (index != active) {
     // $(this).children('.mobile-unit-title-plus').css('display', 'none')
