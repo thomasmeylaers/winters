@@ -22,21 +22,6 @@ svg rect {
   visibility: hidden;
 }
 
-@-webkit-keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
 @keyframes fade-in {
   from {
     visibility: hidden;
@@ -52,23 +37,7 @@ svg rect {
   }
 }
 .fade-in {
-  -webkit-animation: fade-in 200ms ease-in-out forwards;
-          animation: fade-in 200ms ease-in-out forwards;
-}
-
-@-webkit-keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
+  animation: fade-in 200ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -86,17 +55,7 @@ svg rect {
   }
 }
 .fade-out {
-  -webkit-animation: fade-out 200ms ease-in-out forwards;
-          animation: fade-out 200ms ease-in-out forwards;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
+  animation: fade-out 200ms ease-in-out forwards;
 }
 
 @keyframes scroll {
@@ -469,7 +428,6 @@ button:hover,
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     z-index: 100;
     position: fixed;
@@ -1505,6 +1463,9 @@ button:hover,
 .producten__items #formatec:hover {
   opacity: 0.5;
 }
+.producten__items #i-verloren-wastechniek button {
+  display: none;
+}
 
 .machinepark__nav {
   background-color: #3A3A3A;
@@ -1961,14 +1922,14 @@ button:hover,
     text-transform: uppercase;
   }
   .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-plus svg,
-.machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-plus path {
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-plus path {
     fill: black !important;
   }
   .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-minus {
     display: none;
   }
   .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-minus svg,
-.machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-minus path {
+  .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-title-wrapper .mobile-unit-title-minus path {
     fill: none !important;
   }
   .machinepark-selection .wrapper .content-wrapper .mobile-wrapper .mobile-unit-content {
