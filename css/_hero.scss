@@ -12,6 +12,9 @@
     flex-direction: column;
     height: 75vh;
     justify-content: flex-end;
+    position: relative;
+  z-index: -1;
+
   }
   &__title {
     h1 {
